@@ -16,8 +16,11 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include 
+
+# importar include para colocar as urls referente a galeria e qualquer outro app criado
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("", include("galeria.urls")),
 ]
